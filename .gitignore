@@ -1,0 +1,17 @@
+# git ignore file
+GOF.BusinessProcess/bin/
+GOF.BusinessProcess/obj/
+GOF.DataAccess/bin/
+GOF.DataAccess/obj/
+GOF.Entity/bin/
+GOF.Entity/obj/
+GOF.Web/GOF.Web.Publish.xml
+GOF.Web/App.config
+GOF.Web/DB.config
+GOF.Web/Web.config
+GOF.Web/Web.Debug.config
+GOF.Web/Web.Release.config
+GOF.Web/bin/
+GOF.Web/obj/
+solGOF.sln
+solGOF.v11.suo
