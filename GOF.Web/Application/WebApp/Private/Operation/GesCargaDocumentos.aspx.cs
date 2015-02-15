@@ -15,7 +15,7 @@ using System.Configuration;
 
 namespace GOF.Web.Application.WebApp.Private.Operation
 {
-    public partial class GesCargaDocumentos : System.Web.UI.MasterPage
+    public partial class GesCargaDocumentos : System.Web.UI.Page
     {
 
         //// Utilerías
@@ -295,12 +295,15 @@ namespace GOF.Web.Application.WebApp.Private.Operation
 
         //// Eventos de la página
 
-        //protected void Page_Load(object sender, EventArgs e){
+        protected void Page_Load(object sender, EventArgs e){
         //    try
         //    {
 
         //        // Validaciones
-        //        if (Page.IsPostBack) { return; }
+                if (Page.IsPostBack) { return; }
+
+                gvCiudadano.DataSource = null;
+                gvCiudadano.DataBind();
 
         //        // Llenado de controles
         //        SelectPais();
@@ -321,7 +324,7 @@ namespace GOF.Web.Application.WebApp.Private.Operation
         //    }catch (Exception ex){
         //        ScriptManager.RegisterStartupScript(this.Page, this.GetType(), Convert.ToString(Guid.NewGuid()), "alert('" + gcJavascript.ClearText(ex.Message) + "'); focusControl('" + this.txtNombre.ClientID + "');", true);
         //    }
-        //}
+        }
 
         //protected void btnBuscar_Click(object sender, EventArgs e){
         //    try
@@ -506,5 +509,19 @@ namespace GOF.Web.Application.WebApp.Private.Operation
         //    }
         //}
 
+        protected void BuscadorListaPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BuscadorListaEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

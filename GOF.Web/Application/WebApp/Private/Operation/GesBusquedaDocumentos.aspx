@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Include/MasterPage/PrivateTemplate.Master" AutoEventWireup="true" CodeBehind="GesBusquedaDocumentos.aspx.cs" Inherits="GOF.Web.Application.WebApp.Private.Operation.GesBusquedaDocumentos" %>
-<%@ Register Assembly="AjaxControlToolkt" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 
@@ -92,10 +92,11 @@
             <td>
                 <asp:Panel ID="pnlGrid" runat="server" Width="100%">
                     <asp:GridView ID="gvCiudadano" runat="server" AllowPaging="false" AllowSorting="true" AutoGenerateColumns="False" Width="100%"
-						DataKeyNames="CiudadanoId,NombreCompleto"
+						>
+                        <%--DataKeyNames="CiudadanoId,NombreCompleto"
 						OnRowDataBound="gvCiudadano_RowDataBound"
                         OnRowCommand="gvCiudadano_RowCommand"
-						OnSorting="gvCiudadano_Sorting">
+						OnSorting="gvCiudadano_Sorting"--%>
                         <AlternatingRowStyle CssClass="Grid_Row_Alternating" />
                         <HeaderStyle CssClass="Grid_Header" />
                         <RowStyle CssClass="Grid_Row" />

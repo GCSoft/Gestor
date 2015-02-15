@@ -20,10 +20,11 @@
             <td>
                 <asp:Panel ID="pnlGrid" runat="server" Width="100%">
                     <asp:GridView ID="gvCiudadano" runat="server" AllowPaging="false" AllowSorting="true" AutoGenerateColumns="False" Width="100%"
-						DataKeyNames="CiudadanoId,NombreCompleto"
+						>
+                        <%--DataKeyNames="CiudadanoId,NombreCompleto"
 						OnRowDataBound="gvCiudadano_RowDataBound"
                         OnRowCommand="gvCiudadano_RowCommand"
-						OnSorting="gvCiudadano_Sorting">
+						OnSorting="gvCiudadano_Sorting"--%>
                         <AlternatingRowStyle CssClass="Grid_Row_Alternating" />
                         <HeaderStyle CssClass="Grid_Header" />
                         <RowStyle CssClass="Grid_Row" />

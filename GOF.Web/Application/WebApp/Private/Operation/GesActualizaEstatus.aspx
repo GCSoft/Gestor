@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Include/MasterPage/PrivateTemplate.Master" AutoEventWireup="true" CodeBehind="GesActualizaEstatus.aspx.cs" Inherits="GOF.Web.Application.WebApp.Private.Operation.GesActualizaEstatus" %>
-<%@ Register Assembly="AjaxControlToolkt" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 
@@ -19,14 +19,6 @@
         <tr>
             <td>
 				<asp:Panel ID="pnlFormulario" runat="server" Visible="true" Width="100%">
-					<table border="0" style="width:460px">
-						<tr>
-							<td class="Etiqueta">Nombre del Ciudadano</td>
-                            <td class="Espacio"></td>
-                            <td class="Campo"><asp:TextBox ID="txtNombre" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
-                        </tr>
-                        <tr><td colspan="3" style="height:10px;"></td></tr>
-                    </table>
                     <table border="0" style="width: 460px">
                         <tr>
                             <td colspan="3">
@@ -45,14 +37,14 @@
                                             <Content>
 												<table border="0" style="width: 460px">
 													<tr>
-														<td class="Etiqueta">Apellido Paterno</td>
+														<td class="Etiqueta">Documento</td>
 														<td class="Espacio"></td>
 														<td class="Campo"><asp:TextBox ID="TextBoxPaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 													</tr>
 													<tr>
-														<td class="Etiqueta">Apellido Materno</td>
+														<td class="Etiqueta">Comentario</td>
 														<td class="Espacio"></td>
-														<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
+														<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px" TextMode="MultiLine"></asp:TextBox></td>
 													</tr>
 													<tr>
 														<td class="Etiqueta">País</td>
@@ -109,11 +101,11 @@
         <tr>
             <td>
                 <asp:Panel ID="pnlGrid" runat="server" Width="100%">
-                    <asp:GridView ID="gvCiudadano" runat="server" AllowPaging="false" AllowSorting="true" AutoGenerateColumns="False" Width="100%"
-						DataKeyNames="CiudadanoId,NombreCompleto"
+                    <asp:GridView ID="gvCiudadano" runat="server" AllowPaging="false" AllowSorting="true" AutoGenerateColumns="False" Width="100%">
+                    <%--DataKeyNames="CiudadanoId,NombreCompleto"
 						OnRowDataBound="gvCiudadano_RowDataBound"
                         OnRowCommand="gvCiudadano_RowCommand"
-						OnSorting="gvCiudadano_Sorting">
+						OnSorting="gvCiudadano_Sorting">--%>
                         <AlternatingRowStyle CssClass="Grid_Row_Alternating" />
                         <HeaderStyle CssClass="Grid_Header" />
                         <RowStyle CssClass="Grid_Row" />

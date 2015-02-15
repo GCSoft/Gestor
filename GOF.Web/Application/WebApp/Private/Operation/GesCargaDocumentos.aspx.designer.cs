@@ -31,24 +31,6 @@ namespace GOF.Web.Application.WebApp.Private.Operation {
         protected global::System.Web.UI.WebControls.Panel pnlFormulario;
         
         /// <summary>
-        /// acrdBusqueda control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.Accordion acrdBusqueda;
-        
-        /// <summary>
-        /// apnlFiltros control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.AccordionPane apnlFiltros;
-        
-        /// <summary>
         /// lblFiltro control.
         /// </summary>
         /// <remarks>

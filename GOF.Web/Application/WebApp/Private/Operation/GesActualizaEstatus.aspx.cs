@@ -15,7 +15,7 @@ using System.Configuration;
 
 namespace GOF.Web.Application.WebApp.Private.Operation
 {
-    public partial class GesActualizaEstatus : System.Web.UI.MasterPage
+    public partial class GesActualizaEstatus : System.Web.UI.Page
     {
 
         //// Utilerías

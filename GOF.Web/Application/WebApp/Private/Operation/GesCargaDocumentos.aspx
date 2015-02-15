@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Include/MasterPage/PrivateTemplate.Master" AutoEventWireup="true" CodeBehind="GesCargaDocumentos.aspx.cs" Inherits="GOF.Web.Application.WebApp.Private.Operation.GesCargaDocumentos" %>
-<%@ Register Assembly="AjaxControlToolkt" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 
@@ -10,7 +10,7 @@
     <table class="GeneralTable">
         <tr>
             <td class="tdCeldaTituloEncabezado" style="background-image: url('../../../../Include/Image/Web/BarraTitulo.png');">
-                Buscar ciudadano
+                Cargar Documento
             </td>
         </tr>
         <tr>
@@ -22,55 +22,45 @@
                     <table border="0" style="width: 460px">
                         <tr>
                             <td colspan="3">
-                                <ajaxToolkit:Accordion ID="acrdBusqueda" runat="server" SelectedIndex="-1" HeaderCssClass="accordionHeader" HeaderSelectedCssClass="accordionHeaderSelected" ContentCssClass="accordionContent" FadeTransitions="false" FramesPerSecond="40" TransitionDuration="250" AutoSize="None" RequireOpenedPane="False">
-                                    <Panes>
-                                        <ajaxToolkit:AccordionPane ID="apnlFiltros" runat="server">
-                                            <Header>
-                                                <table border="0" cellpadding="0" cellspacing="0" width="120px">
-                                                    <tr>
-                                                        <td align="left" style="cursor: pointer;">
-															<asp:Label ID="lblFiltro" Style="height: 23px;" runat="server" Font-Bold="true" Font-Names="Arial" Font-Size="9pt" Font-Underline="true">Documentos</asp:Label>
-														</td>
-                                                    </tr>
-                                                </table>
-                                            </Header>
-                                            <Content>
-												<table border="0" style="width: 460px">
-													<tr>
-														<td class="Etiqueta">Fecha</td>
-														<td class="Espacio"></td>
-														<td class="Campo"><asp:TextBox ID="TextBoxPaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
-													</tr>
-													<tr>
-														<td class="Etiqueta">Documentos</td>
-														<td class="Espacio"></td>
-														<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
-													</tr>
-													<tr>
-														<td class="Etiqueta">Responsable</td>
-														<td class="Espacio"></td>
-														<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged"></asp:DropDownList></td>
-													</tr>
-													<tr>
-														<td class="Etiqueta">Fecha Compromiso</td>
-														<td class="Espacio"></td>
-														<td class="Campo"><asp:DropDownList ID="BuscadorListaEstado" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaEstado_SelectedIndexChanged"></asp:DropDownList></td>
-													</tr>
-													<tr>
-														<td class="Etiqueta">Área</td>
-														<td class="Espacio"></td>
-														<td class="Campo"><asp:TextBox ID="TextBox1" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
-													</tr>
-													<tr>
-														<td class="Etiqueta">Observaciones</td>
-														<td class="Espacio"></td>
-														<td class="Campo"><asp:TextBox ID="TextBox2" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
-													</tr>
-												</table>
-                                            </Content>
-                                        </ajaxToolkit:AccordionPane>
-                                    </Panes>
-                                </ajaxToolkit:Accordion>
+                                <table border="0" cellpadding="0" cellspacing="0" width="120px">
+                                    <tr>
+                                        <td align="left" style="cursor: pointer;">
+											<asp:Label ID="lblFiltro" Style="height: 23px;" runat="server" Font-Bold="true" Font-Names="Arial" Font-Size="9pt" Font-Underline="true">Documentos</asp:Label>
+										</td>
+                                    </tr>
+                                </table>
+								<table border="0" style="width: 460px">
+									<tr>
+										<td class="Etiqueta">Fecha</td>
+										<td class="Espacio"></td>
+										<td class="Campo"><asp:TextBox ID="TextBoxPaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
+									</tr>
+									<tr>
+										<td class="Etiqueta">Documento</td>
+										<td class="Espacio"></td>
+										<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
+									</tr>
+									<tr>
+										<td class="Etiqueta">Responsable</td>
+										<td class="Espacio"></td>
+										<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged"></asp:DropDownList></td>
+									</tr>
+									<tr>
+										<td class="Etiqueta">Fecha Compromiso</td>
+										<td class="Espacio"></td>
+										<td class="Campo"><asp:DropDownList ID="BuscadorListaEstado" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaEstado_SelectedIndexChanged"></asp:DropDownList></td>
+									</tr>
+									<tr>
+										<td class="Etiqueta">Área</td>
+										<td class="Espacio"></td>
+										<td class="Campo"><asp:TextBox ID="TextBox1" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
+									</tr>
+									<tr>
+										<td class="Etiqueta">Observaciones</td>
+										<td class="Espacio"></td>
+										<td class="Campo"><asp:TextBox ID="TextBox2" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
+									</tr>
+								</table>
                             </td>
                         </tr>
                     </table>
@@ -97,10 +87,11 @@
             <td>
                 <asp:Panel ID="pnlGrid" runat="server" Width="100%">
                     <asp:GridView ID="gvCiudadano" runat="server" AllowPaging="false" AllowSorting="true" AutoGenerateColumns="False" Width="100%"
-						DataKeyNames="CiudadanoId,NombreCompleto"
+						>
+                        <%--DataKeyNames="CiudadanoId,NombreCompleto"
 						OnRowDataBound="gvCiudadano_RowDataBound"
                         OnRowCommand="gvCiudadano_RowCommand"
-						OnSorting="gvCiudadano_Sorting">
+						OnSorting="gvCiudadano_Sorting"--%>
                         <AlternatingRowStyle CssClass="Grid_Row_Alternating" />
                         <HeaderStyle CssClass="Grid_Header" />
                         <RowStyle CssClass="Grid_Row" />
