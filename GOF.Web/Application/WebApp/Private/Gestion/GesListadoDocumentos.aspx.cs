@@ -13,9 +13,9 @@ using System.Data;
 //using GOF.Entity.Object;
 using System.Configuration;
 
-namespace GOF.Web.Application.WebApp.Private.Operation
+namespace GOF.Web.Application.WebApp.Private.Gestion
 {
-    public partial class GesBusquedaDocumentos : System.Web.UI.Page
+    public partial class GesListadoDocumentos : System.Web.UI.Page
     {
 
         //// Utilerías
@@ -299,11 +299,11 @@ namespace GOF.Web.Application.WebApp.Private.Operation
         //    try
         //    {
 
-            // Validaciones
-            if (Page.IsPostBack) { return; }
+        //        // Validaciones
+                if (Page.IsPostBack) { return; }
 
-            gvCiudadano.DataSource = null;
-            gvCiudadano.DataBind();
+                gvCiudadano.DataSource = null;
+                gvCiudadano.DataBind();
 
         //        // Llenado de controles
         //        SelectPais();
@@ -509,19 +509,5 @@ namespace GOF.Web.Application.WebApp.Private.Operation
         //    }
         //}
 
-        protected void BuscadorListaPais_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void BuscadorListaCiudad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

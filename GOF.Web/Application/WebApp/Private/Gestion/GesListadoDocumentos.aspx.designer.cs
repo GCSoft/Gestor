@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GOF.Web.Application.WebApp.Private.Operation {
+namespace GOF.Web.Application.WebApp.Private.Gestion {
     
     
     public partial class GesListadoDocumentos {

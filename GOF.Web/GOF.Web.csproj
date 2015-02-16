@@ -64,11 +64,12 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Application\WebApp\Private\Gestion\GesCalendario.aspx" />
     <Content Include="Application\WebApp\Private\Home\AppIndex.aspx" />
-    <Content Include="Application\WebApp\Private\Operation\GesActualizaEstatus.aspx" />
-    <Content Include="Application\WebApp\Private\Operation\GesBusquedaDocumentos.aspx" />
-    <Content Include="Application\WebApp\Private\Operation\GesCargaDocumentos.aspx" />
-    <Content Include="Application\WebApp\Private\Operation\GesListadoDocumentos.aspx" />
+    <Content Include="Application\WebApp\Private\Gestion\GesActualizaEstatus.aspx" />
+    <Content Include="Application\WebApp\Private\Gestion\GesBusquedaDocumentos.aspx" />
+    <Content Include="Application\WebApp\Private\Gestion\GesCargaDocumentos.aspx" />
+    <Content Include="Application\WebApp\Private\Gestion\GesListadoDocumentos.aspx" />
     <Content Include="Application\WebApp\Private\SysApp\saLogout.aspx" />
     <Content Include="Application\WebApp\Public\frmLogin.aspx" />
     <Content Include="Include\Components\Ajax\AjaxControlToolkit.dll" />
@@ -312,6 +313,13 @@
     <Content Include="Include\Style\Table.css" />
     <Content Include="Include\Style\Text.css" />
     <Content Include="Include\Style\Wait.css" />
+    <Content Include="Include\WebUserControls\FullCalendar\Script\fullcalendar.min.js" />
+    <Content Include="Include\WebUserControls\FullCalendar\Script\jquery.min.js" />
+    <Content Include="Include\WebUserControls\FullCalendar\Script\lang-all.js" />
+    <Content Include="Include\WebUserControls\FullCalendar\Script\moment.min.js" />
+    <Content Include="Include\WebUserControls\FullCalendar\Style\fullcalendar.css" />
+    <Content Include="Include\WebUserControls\FullCalendar\Style\fullcalendar.print.css" />
+    <Content Include="Include\WebUserControls\FullCalendar\wucFullCalendar.ascx" />
     <Content Include="Include\WebUserControls\wucCalendar.ascx" />
     <Content Include="Include\WebUserControls\wucMenu.ascx" />
     <Content Include="Include\WebUserControls\wucTimer.ascx" />
@@ -325,6 +333,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\WebApp\Private\Gestion\GesCalendario.aspx.cs">
+      <DependentUpon>GesCalendario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application\WebApp\Private\Gestion\GesCalendario.aspx.designer.cs">
+      <DependentUpon>GesCalendario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Application\WebApp\Private\Home\AppIndex.aspx.cs">
       <DependentUpon>AppIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -332,32 +347,32 @@
     <Compile Include="Application\WebApp\Private\Home\AppIndex.aspx.designer.cs">
       <DependentUpon>AppIndex.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesActualizaEstatus.aspx.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesActualizaEstatus.aspx.cs">
       <DependentUpon>GesActualizaEstatus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesActualizaEstatus.aspx.designer.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesActualizaEstatus.aspx.designer.cs">
       <DependentUpon>GesActualizaEstatus.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesBusquedaDocumentos.aspx.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesBusquedaDocumentos.aspx.cs">
       <DependentUpon>GesBusquedaDocumentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesBusquedaDocumentos.aspx.designer.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesBusquedaDocumentos.aspx.designer.cs">
       <DependentUpon>GesBusquedaDocumentos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesCargaDocumentos.aspx.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesCargaDocumentos.aspx.cs">
       <DependentUpon>GesCargaDocumentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesCargaDocumentos.aspx.designer.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesCargaDocumentos.aspx.designer.cs">
       <DependentUpon>GesCargaDocumentos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesListadoDocumentos.aspx.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesListadoDocumentos.aspx.cs">
       <DependentUpon>GesListadoDocumentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Application\WebApp\Private\Operation\GesListadoDocumentos.aspx.designer.cs">
+    <Compile Include="Application\WebApp\Private\Gestion\GesListadoDocumentos.aspx.designer.cs">
       <DependentUpon>GesListadoDocumentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Application\WebApp\Private\SysApp\saLogout.aspx.cs">
@@ -401,6 +416,13 @@
     </Compile>
     <Compile Include="Include\MasterPage\PrivateTemplate.Master.designer.cs">
       <DependentUpon>PrivateTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Include\WebUserControls\FullCalendar\wucFullCalendar.ascx.cs">
+      <DependentUpon>wucFullCalendar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Include\WebUserControls\FullCalendar\wucFullCalendar.ascx.designer.cs">
+      <DependentUpon>wucFullCalendar.ascx</DependentUpon>
     </Compile>
     <Compile Include="Include\WebUserControls\wucCalendar.ascx.cs">
       <DependentUpon>wucCalendar.ascx</DependentUpon>

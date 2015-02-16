@@ -7,91 +7,109 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIAQ.Web.Include.WebUserControls {
+namespace GOF.Web.Application.WebApp.Private.Gestion {
     
     
-    public partial class wucBusquedaCiudadano {
+    public partial class GesBusquedaDocumentos {
         
         /// <summary>
-        /// txtCiudadano control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCiudadano;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// imgBusqueda control.
+        /// pnlFormulario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBusqueda;
+        protected global::System.Web.UI.WebControls.Panel pnlFormulario;
         
         /// <summary>
-        /// pnlAction control.
+        /// acrdBusqueda control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlAction;
+        protected global::AjaxControlToolkit.Accordion acrdBusqueda;
         
         /// <summary>
-        /// pnlActionContent control.
+        /// apnlFiltros control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlActionContent;
+        protected global::AjaxControlToolkit.AccordionPane apnlFiltros;
         
         /// <summary>
-        /// pnlActionHeader control.
+        /// lblFiltro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlActionHeader;
+        protected global::System.Web.UI.WebControls.Label lblFiltro;
         
         /// <summary>
-        /// lblActionTitle control.
+        /// TextBoxPaterno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblActionTitle;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPaterno;
         
         /// <summary>
-        /// imgCloseWindow control.
+        /// TextBoxMaterno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgCloseWindow;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxMaterno;
         
         /// <summary>
-        /// pnlActionBody control.
+        /// BuscadorListaPais control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlActionBody;
+        protected global::System.Web.UI.WebControls.DropDownList BuscadorListaPais;
         
         /// <summary>
-        /// txtNombre control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        
+        /// <summary>
+        /// BuscadorListaCiudad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList BuscadorListaCiudad;
+        
+        /// <summary>
+        /// pnlBotones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlBotones;
         
         /// <summary>
         /// btnBuscar control.
@@ -103,6 +121,15 @@ namespace SIAQ.Web.Include.WebUserControls {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
+        /// pnlGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlGrid;
+        
+        /// <summary>
         /// gvCiudadano control.
         /// </summary>
         /// <remarks>
@@ -110,33 +137,6 @@ namespace SIAQ.Web.Include.WebUserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvCiudadano;
-        
-        /// <summary>
-        /// lblMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
-        
-        /// <summary>
-        /// hddCiudadanoID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hddCiudadanoID;
-        
-        /// <summary>
-        /// hddNombre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hddNombre;
         
         /// <summary>
         /// hddSort control.

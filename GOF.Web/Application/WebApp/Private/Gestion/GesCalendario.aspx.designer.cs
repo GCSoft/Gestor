@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIAQ.Web.Include.WebUserControls {
+namespace GOF.Web.Application.WebApp.Private.Gestion {
     
     
-    public partial class wucFixedDateTime {
+    public partial class GesCalendario {
         
         /// <summary>
-        /// lblCanvas control.
+        /// wucFullCalendar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCanvas;
-        
-        /// <summary>
-        /// hddUniversalDateTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hddUniversalDateTime;
+        protected global::GOF.Web.Include.WebUserControls.FullCalendar.wucFullCalendar wucFullCalendar1;
     }
 }
