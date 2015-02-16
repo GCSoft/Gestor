@@ -12,7 +12,7 @@
             </td>
         </tr>
         <tr>
-            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Proporcione los filtros deseados para buscar al ciudadano."></asp:Label></td>
+            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Listado de documentos pendientes de alguna acción."></asp:Label></td>
         </tr>
         <tr><td class="tdCeldaMiddleSpace"></td></tr>
         <tr><td class="tdCeldaMiddleSpace"></td></tr>
