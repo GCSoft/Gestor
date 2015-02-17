@@ -8,7 +8,7 @@
     <table class="GeneralTable">
         <tr>
             <td class="tdCeldaTituloEncabezado" style="background-image: url('../../../../Include/Image/Web/BarraTitulo.png');">
-                Listado de Documentos
+                Listado de Oficios
             </td>
         </tr>
         <tr>
@@ -31,26 +31,31 @@
                         <EmptyDataTemplate>
                             <table border="1px" cellpadding="0px" cellspacing="0px" width="100%">
                                 <tr class="Grid_Header">
-                                    <td>Solicitud</td>
-									<td style="width:40px;">Solicita</td>
+                                    <td style="width:40px;">Tema</td>
+									<td style="width:40px;">Remitente</td>
 									<td style="width:40px;">Fecha Solicitud</td>
-									<td style="width:240px;">Fecha Estimada</td>
+									<td style="width:240px;">Fecha Compromiso</td>
 									<td style="width:100px;">Estatus</td>
 									<td style="width:100px;">Editar</td>
                                 </tr>
                                 <tr class="Grid_Row">
-                                    <td colspan="11">No se encontraron ciudadanos registrados en el sistema</td>
+                                    <td>Mantenimiento</td>
+                                    <td>Manuel Cárdenas</td>
+                                    <td>20-02-2015</td>
+                                    <td>22-02-2015</td>
+                                    <td>Por Revisar</td>
+                                    <td><asp:ImageButton ID="imgGrid" runat="server" ImageUrl="~/Include/Image/Buttons/Edit.png" /></td>
                                 </tr>
                             </table>
                         </EmptyDataTemplate>
                         <Columns>
-							<asp:BoundField HeaderText="Solicitud"		    ItemStyle-HorizontalAlign="Left"							DataField="Solicitud"		SortExpression="NombreCompleto"></asp:BoundField>
-							<asp:BoundField HeaderText="Solicita"		    ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Solicita"				SortExpression="Edad"></asp:BoundField>
-							<asp:BoundField HeaderText="Fecha Solicitud"	ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="FechaSolicitud"			SortExpression="SexoNombre"></asp:BoundField>
-							<asp:BoundField HeaderText="Fecha Estimada"	    ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="240px"	DataField="FechaEstimada"			SortExpression="Domicilio"></asp:BoundField>
-							<asp:BoundField HeaderText="Estatus"		    ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="Estatus"		SortExpression="NombreEstado"></asp:BoundField>
-							<asp:BoundField HeaderText="Editar"	            ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="Editar"	                SortExpression="TelefonoPrincipal"></asp:BoundField>
-							<asp:TemplateField ItemStyle-HorizontalAlign="Center" ItemStyle-Width="25px">
+							<asp:BoundField HeaderText="Tema"		                ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="40px"	DataField="Solicitud"		SortExpression="NombreCompleto"></asp:BoundField>
+							<asp:BoundField HeaderText="Remitente"		            ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Solicita"				SortExpression="Edad"></asp:BoundField>
+							<asp:BoundField HeaderText="Fecha Solicitud"	        ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="FechaSolicitud"			SortExpression="SexoNombre"></asp:BoundField>
+							<asp:BoundField HeaderText="Fecha Compromiso"	        ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="240px"	DataField="FechaEstimada"			SortExpression="Domicilio"></asp:BoundField>
+							<asp:BoundField HeaderText="Estatus"		            ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="Estatus"		SortExpression="NombreEstado"></asp:BoundField>
+							<asp:BoundField HeaderText="Editar"	                    ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="Editar"	                SortExpression="TelefonoPrincipal"></asp:BoundField>
+							<asp:TemplateField ItemStyle-HorizontalAlign="Center"   ItemStyle-Width="25px">
                                 <ItemTemplate>
                                     <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<%#Eval("CiudadanoId")%>' CommandName="Editar" ImageUrl="~/Include/Image/Buttons/Edit.png" />
                                 </ItemTemplate>

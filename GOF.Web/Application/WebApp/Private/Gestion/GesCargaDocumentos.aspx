@@ -10,11 +10,11 @@
     <table class="GeneralTable">
         <tr>
             <td class="tdCeldaTituloEncabezado" style="background-image: url('../../../../Include/Image/Web/BarraTitulo.png');">
-                Cargar Documento
+                Cargar Oficio
             </td>
         </tr>
         <tr>
-            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Proporcione los filtros deseados para buscar al ciudadano."></asp:Label></td>
+            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Proporcione los filtros deseados para buscar los oficios."></asp:Label></td>
         </tr>
         <tr>
             <td>
@@ -25,7 +25,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0" width="120px">
                                     <tr>
                                         <td align="left" style="cursor: pointer;">
-											<asp:Label ID="lblFiltro" Style="height: 23px;" runat="server" Font-Bold="true" Font-Names="Arial" Font-Size="9pt" Font-Underline="true">Documentos</asp:Label>
+											<asp:Label ID="lblFiltro" Style="height: 23px;" runat="server" Font-Bold="true" Font-Names="Arial" Font-Size="9pt" Font-Underline="true">Oficios</asp:Label>
 										</td>
                                     </tr>
                                 </table>
@@ -36,22 +36,27 @@
 										<td class="Campo"><asp:TextBox ID="TextBoxPaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 									</tr>
 									<tr>
-										<td class="Etiqueta">Documento</td>
+										<td class="Etiqueta">Oficio</td>
 										<td class="Espacio"></td>
-										<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
+										<td class="Campo"><input type="file" value="Carga" />
+                                        <asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 									</tr>
 									<tr>
-										<td class="Etiqueta">Responsable</td>
+										<td class="Etiqueta">Destinatario</td>
 										<td class="Espacio"></td>
-										<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged"></asp:DropDownList></td>
+										<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged">
+                                            <asp:ListItem>[Seleccionar]</asp:ListItem>
+                                            <asp:ListItem>Manuel Cárdenas</asp:ListItem>
+                                            <asp:ListItem>Ricardo López</asp:ListItem>
+                                        </asp:DropDownList></td>
 									</tr>
 									<tr>
 										<td class="Etiqueta">Fecha Compromiso</td>
 										<td class="Espacio"></td>
-										<td class="Campo"><asp:DropDownList ID="BuscadorListaEstado" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaEstado_SelectedIndexChanged"></asp:DropDownList></td>
+										<td class="Campo"><asp:TextBox ID="TextBox3" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox><input type="button" value="#" /></td>
 									</tr>
 									<tr>
-										<td class="Etiqueta">Área</td>
+										<td class="Etiqueta">Grupo</td>
 										<td class="Espacio"></td>
 										<td class="Campo"><asp:TextBox ID="TextBox1" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 									</tr>
@@ -98,51 +103,30 @@
                         <EmptyDataTemplate>
                             <table border="1px" cellpadding="0px" cellspacing="0px" width="100%">
                                 <tr class="Grid_Header">
-                                    <td>Nombre</td>
-									<td style="width:40px;">Edad</td>
-									<td style="width:40px;">Sexo</td>
-									<td style="width:240px;">Domicilio</td>
-									<td style="width:100px;">Estado</td>
-									<td style="width:100px;">Teléfono</td>
-									<td style="width:150px;">Email</td>
-									<td style="width:30px;"></td>
-									<td style="width:30px;"></td>
-									<td style="width:30px;"></td>
-									<td style="width:30px;"></td>
+									<td style="width:40px;">Tema</td>
+									<td style="width:40px;">Destnatario</td>
+									<td style="width:240px;">Fecha Compromiso</td>
+									<td style="width:100px;">Grupo</td>
+									<td style="width:100px;">Obervaciones</td>
+									<td style="width:150px;">Ver Oficio</td>
                                 </tr>
                                 <tr class="Grid_Row">
-                                    <td colspan="11">No se encontraron ciudadanos registrados en el sistema</td>
+                                    <td>Mantenimiento</td>
+                                    <td>Manuel Cárdenas</td>
+                                    <td>20-02-2015</td>
+                                    <td>Soporte</td>
+                                    <td>Verificar documentación de contratos</td>
+                                    <td><asp:ImageButton ID="imgGrid" runat="server" ImageUrl="~/Include/Image/Buttons/Edit.png" /></td>
                                 </tr>
                             </table>
                         </EmptyDataTemplate>
                         <Columns>
-							<asp:BoundField HeaderText="Nombre"		ItemStyle-HorizontalAlign="Left"							DataField="NombreCompleto"		SortExpression="NombreCompleto"></asp:BoundField>
-							<asp:BoundField HeaderText="Edad"		ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Edad"				SortExpression="Edad"></asp:BoundField>
-							<asp:BoundField HeaderText="Sexo"		ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="SexoNombre"			SortExpression="SexoNombre"></asp:BoundField>
-							<asp:BoundField HeaderText="Domicilio"	ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="240px"	DataField="Domicilio"			SortExpression="Domicilio"></asp:BoundField>
-							<asp:BoundField HeaderText="Estado"		ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="NombreEstado"		SortExpression="NombreEstado"></asp:BoundField>
-							<asp:BoundField HeaderText="Telefono"	ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="TelefonoPrincipal"	SortExpression="TelefonoPrincipal"></asp:BoundField>
-							<asp:BoundField HeaderText="Email"		ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="150px"	DataField="CorreoElectronico"	SortExpression="CorreoElectronico"></asp:BoundField>
-                            <asp:TemplateField ItemStyle-HorizontalAlign="Center" ItemStyle-Width="25px">
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgVisita" runat="server"  CommandArgument='<%#Eval("CiudadanoId")%>' CommandName="Visita" ImageUrl="~/Include/Image/Buttons/AgregarVisita.png"/>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-							<asp:TemplateField ItemStyle-HorizontalAlign="Center" ItemStyle-Width="25px">
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgSolicitud" runat="server" CommandArgument='<%#Eval("CiudadanoId")%>' CommandName="Solicitud" ImageUrl="~/Include/Image/Buttons/AgregarSolicitud.png" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:TemplateField ItemStyle-HorizontalAlign="Center" ItemStyle-Width="25px">
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgConsultar" runat="server" CommandArgument='<%#Eval("CiudadanoId")%>' CommandName="Consultar" ImageUrl="~/Include/Image/Buttons/ConsultarCiudadano.png" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
-							<asp:TemplateField ItemStyle-HorizontalAlign="Center" ItemStyle-Width="25px">
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgEdit" runat="server" CommandArgument='<%#Eval("CiudadanoId")%>' CommandName="Editar" ImageUrl="~/Include/Image/Buttons/Edit.png" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
+							<asp:BoundField HeaderText="Tema"		        ItemStyle-HorizontalAlign="Left"							DataField="NombreCompleto"		SortExpression="NombreCompleto"></asp:BoundField>
+							<asp:BoundField HeaderText="Destnatario"		ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Edad"				SortExpression="Edad"></asp:BoundField>
+							<asp:BoundField HeaderText="Fecha Compromiso"	ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="SexoNombre"			SortExpression="SexoNombre"></asp:BoundField>
+							<asp:BoundField HeaderText="Grupo"	            ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="240px"	DataField="Domicilio"			SortExpression="Domicilio"></asp:BoundField>
+							<asp:BoundField HeaderText="Observaciones"		ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="NombreEstado"		SortExpression="NombreEstado"></asp:BoundField>
+							<asp:BoundField HeaderText="Ver Oficio"		            ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="150px"	DataField="CorreoElectronico"	SortExpression="CorreoElectronico"></asp:BoundField>
                         </Columns>
                     </asp:GridView>
                 </asp:Panel>

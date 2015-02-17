@@ -10,11 +10,11 @@
     <table class="GeneralTable">
         <tr>
             <td class="tdCeldaTituloEncabezado" style="background-image: url('../../../../Include/Image/Web/BarraTitulo.png');">
-                Busqueda de Documentos
+                Busqueda de Oficios
             </td>
         </tr>
         <tr>
-            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Proporcione los filtros deseados para buscar al ciudadano."></asp:Label></td>
+            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Proporcione los filtros deseados para buscar los oficios."></asp:Label></td>
         </tr>
         <tr>
             <td>
@@ -37,19 +37,23 @@
                                             <Content>
 												<table border="0" style="width: 460px">
 													<tr>
-														<td class="Etiqueta">Nombre</td>
+														<td class="Etiqueta">Tema</td>
 														<td class="Espacio"></td>
 														<td class="Campo"><asp:TextBox ID="TextBoxPaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 													</tr>
 													<tr>
-														<td class="Etiqueta">Solicita</td>
+														<td class="Etiqueta">Remitente</td>
 														<td class="Espacio"></td>
 														<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 													</tr>
 													<tr>
-														<td class="Etiqueta">Responsable</td>
+														<td class="Etiqueta">Destinatario</td>
 														<td class="Espacio"></td>
-														<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged"></asp:DropDownList></td>
+														<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged">
+                                                            <asp:ListItem>[Seleccionar]</asp:ListItem>
+                                                            <asp:ListItem>Manuel Cárdenas</asp:ListItem>
+                                                            <asp:ListItem>Ricardo López</asp:ListItem>
+                                                        </asp:DropDownList></td>
 													</tr>
 													<tr>
 														<td class="Etiqueta">Fecha Compromiso</td>
@@ -57,9 +61,13 @@
 														<td class="Campo"><asp:TextBox ID="TextBox1" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 													</tr>
 													<tr>
-														<td class="Etiqueta">Área</td>
+														<td class="Etiqueta">Grupo</td>
 														<td class="Espacio"></td>
-														<td class="Campo"><asp:DropDownList ID="BuscadorListaCiudad" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaCiudad_SelectedIndexChanged"></asp:DropDownList></td>
+														<td class="Campo"><asp:DropDownList ID="BuscadorListaCiudad" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaCiudad_SelectedIndexChanged">
+                                                            <asp:ListItem>[Seleccionar]</asp:ListItem>
+                                                            <asp:ListItem>Soporte</asp:ListItem>
+                                                            <asp:ListItem>Servicios</asp:ListItem>
+                                                        </asp:DropDownList></td>
 													</tr>
 												</table>
                                             </Content>
@@ -103,31 +111,31 @@
                         <EmptyDataTemplate>
                             <table border="1px" cellpadding="0px" cellspacing="0px" width="100%">
                                 <tr class="Grid_Header">
-                                    <td>Nombre</td>
-									<td style="width:40px;">Edad</td>
-									<td style="width:40px;">Sexo</td>
-									<td style="width:240px;">Domicilio</td>
-									<td style="width:100px;">Estado</td>
-									<td style="width:100px;">Teléfono</td>
-									<td style="width:150px;">Email</td>
-									<td style="width:30px;"></td>
-									<td style="width:30px;"></td>
-									<td style="width:30px;"></td>
-									<td style="width:30px;"></td>
+									<td style="width:40px;">Tema</td>
+									<td style="width:40px;">Remitente</td>
+									<td style="width:240px;">Destinatario</td>
+									<td style="width:100px;">Grupo</td>
+									<td style="width:100px;">Estatus</td>
+									<td style="width:150px;">Ver Oficio</td>
                                 </tr>
                                 <tr class="Grid_Row">
-                                    <td colspan="11">No se encontraron ciudadanos registrados en el sistema</td>
+                                    <td>Mantenimiento</td>
+                                    <td>Manuel Cárdenas</td>
+                                    <td>Ricardo López</td>
+                                    <td>Soporte</td>
+                                    <td>Por Revisar</td>
+                                    <td><asp:ImageButton ID="imgGrid" runat="server" ImageUrl="~/Include/Image/Buttons/Edit.png" /></td>
                                 </tr>
                             </table>
                         </EmptyDataTemplate>
                         <Columns>
-							<asp:BoundField HeaderText="Solicitud"		    ItemStyle-HorizontalAlign="Left"							DataField="Solicitud"		    SortExpression="Solicitud"></asp:BoundField>
-							<asp:BoundField HeaderText="Solicita"		    ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Solicita"		    SortExpression="Solicita"></asp:BoundField>
-							<asp:BoundField HeaderText="Responsable"	    ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Responsable"		    SortExpression="Responsable"></asp:BoundField>
+							<asp:BoundField HeaderText="Tema"		        ItemStyle-HorizontalAlign="Left"							DataField="Solicitud"		    SortExpression="Solicitud"></asp:BoundField>
+							<asp:BoundField HeaderText="Remitente"		    ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Solicita"		    SortExpression="Solicita"></asp:BoundField>
+							<asp:BoundField HeaderText="Destinatario"	    ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="40px"	DataField="Responsable"		    SortExpression="Responsable"></asp:BoundField>
 							<asp:BoundField HeaderText="Fecha Compromiso"	ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="240px"	DataField="FechaCompromiso"		SortExpression="FechaCompromiso"></asp:BoundField>
-							<asp:BoundField HeaderText="Área"		        ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="Area"		        SortExpression="Area"></asp:BoundField>
+							<asp:BoundField HeaderText="Grupo"		        ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="Area"		        SortExpression="Area"></asp:BoundField>
 							<asp:BoundField HeaderText="Estatus"	        ItemStyle-HorizontalAlign="Center"	ItemStyle-Width="100px"	DataField="Estatus"	            SortExpression="Estatus"></asp:BoundField>
-							<asp:BoundField HeaderText=" "		            ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="150px"	></asp:BoundField>
+							<asp:BoundField HeaderText="Ver Oficio"         ItemStyle-HorizontalAlign="Left"	ItemStyle-Width="150px"	></asp:BoundField>
                         </Columns>
                     </asp:GridView>
                 </asp:Panel>

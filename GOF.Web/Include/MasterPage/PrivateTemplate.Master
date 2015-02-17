@@ -65,13 +65,13 @@
 							<td style="width:260px">
                                 <asp:Panel ID="pnlMenu" runat="server" CssClass="MasterMenu">
                                 <br /><br /><br />
-                                <a href="/Application/WebApp/Private/Gestion/GesBusquedaDocumentos.aspx" class="LinkButton_Regular"><b>Busqueda de Documentos</b></a>
+                                <a href="/Application/WebApp/Private/Gestion/GesBusquedaDocumentos.aspx" class="LinkButton_Regular"><b>Busqueda de Oficios</b></a>
                                 <br /><br />
-                                <a href="/Application/WebApp/Private/Gestion/GesListadoDocumentos.aspx" class="LinkButton_Regular"><b>Listado de Documentos</b></a>
+                                <a href="/Application/WebApp/Private/Gestion/GesListadoDocumentos.aspx" class="LinkButton_Regular"><b>Listado de Oficios</b></a>
                                 <br /><br />
-                                <a href="/Application/WebApp/Private/Gestion/GesCargaDocumentos.aspx" class="LinkButton_Regular"><b>Carga de Documentos</b></a>
+                                <a href="/Application/WebApp/Private/Gestion/GesCargaDocumentos.aspx" class="LinkButton_Regular"><b>Carga de Oficios</b></a>
                                 <br /><br />
-                                <a href="/Application/WebApp/Private/Gestion/GesActualizaEstatus.aspx" class="LinkButton_Regular"><b>Revisión de Documentos</b></a>
+                                <a href="/Application/WebApp/Private/Gestion/GesActualizaEstatus.aspx" class="LinkButton_Regular"><b>Revisión de Oficios</b></a>
 								 <br /><br />
                                 <a href="/Application/WebApp/Private/Gestion/GesCalendario.aspx" class="LinkButton_Regular"><b>Calendario</b></a>
                                     <%--<wuc:wucMenu ID="wucMenuPrincipal" runat="server"></wuc:wucMenu>--%>

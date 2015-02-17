@@ -29,31 +29,31 @@
 
 			events: [
 				{
-					title: 'All Day Event',
+				    title: 'Minuta Junta',
 					start: '2015-02-01'
 				},
 				{
-					title: 'Long Event',
+				    title: 'Minuta Junta',
 					start: '2015-02-07',
 					end: '2015-02-10'
 				},
 				{
 					id: 999,
-					title: 'Repeating Event',
+					title: 'Minuta Junta',
 					start: '2015-02-09T16:00:00'
 				},
 				{
 					id: 999,
-					title: 'Repeating Event',
+					title: 'Servicio Oficinas',
 					start: '2015-02-16T16:00:00'
 				},
 				{
-					title: 'Conference',
+					title: 'Minuta Junta',
 					start: '2015-02-11',
 					end: '2015-02-13'
 				},
 				{
-					title: 'Evento especial',
+					title: 'Oficio Principal',
 					start: '2015-02-12T10:30:00',
 					end: '2015-02-12T12:30:00',
 					color: '#675C9D',
@@ -61,23 +61,23 @@
 					eventTextColor: '#C1C1C1'
 				},
 				{
-					title: 'Lunch',
+					title: 'Servicios',
 					start: '2015-02-12T12:00:00'
 				},
 				{
-					title: 'Meeting',
+					title: 'Minuta',
 					start: '2015-02-12T14:30:00'
 				},
 				{
-					title: 'Happy Hour',
+					title: 'Servicio Oficinas',
 					start: '2015-02-12T17:30:00'
 				},
 				{
-					title: 'Dinner',
+					title: 'Discurso',
 					start: '2015-02-12T20:00:00'
 				},
 				{
-					title: 'Birthday Party',
+					title: 'Mantenimiento',
 					start: '2015-02-13T07:00:00'
 				},
 				{

@@ -14,7 +14,7 @@
             </td>
         </tr>
         <tr>
-            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Actualice estatus de documento"></asp:Label></td>
+            <td class="SubTitulo"><asp:Label ID="Label2" runat="server" Text="Actualice estatus del oficio"></asp:Label></td>
         </tr>
         <tr>
             <td>
@@ -24,19 +24,24 @@
                             <td colspan="3">
 								<table border="0" style="width: 460px">
 									<tr>
-										<td class="Etiqueta">Documento</td>
+										<td class="Etiqueta">Oficios</td>
 										<td class="Espacio"></td>
 										<td class="Campo"><asp:TextBox ID="TextBoxPaterno" runat="server" CssClass="Textbox_General" Width="211px"></asp:TextBox></td>
 									</tr>
 									<tr>
 										<td class="Etiqueta">Comentario</td>
 										<td class="Espacio"></td>
-										<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" CssClass="Textbox_General" Width="211px" TextMode="MultiLine"></asp:TextBox></td>
+										<td class="Campo"><asp:TextBox ID="TextBoxMaterno" runat="server" 
+                                                CssClass="Textbox_General" Width="211px" TextMode="MultiLine" Height="86px"></asp:TextBox></td>
 									</tr>
 									<tr>
 										<td class="Etiqueta">Estatus</td>
 										<td class="Espacio"></td>
-										<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged"></asp:DropDownList></td>
+										<td class="Campo"><asp:DropDownList ID="BuscadorListaPais" runat="server" CssClass="DropDownList_General" Width="216px" AutoPostBack="True" OnSelectedIndexChanged="BuscadorListaPais_SelectedIndexChanged">
+                                            <asp:ListItem>[Seleccionar]</asp:ListItem>
+                                            <asp:ListItem>En proceso</asp:ListItem>
+                                            <asp:ListItem>Revisado</asp:ListItem>
+                                        </asp:DropDownList></td>
 									</tr>
 								</table>                                       
                             </td>
@@ -57,6 +62,9 @@
 							</td>
                             <td style="height:24px; text-align:left; width:130px;">
                                 <asp:Button ID="btnBuscar" runat="server" CssClass="Button_General"  Text="Actualizar" Width="125px" OnClick="btnBuscar_Click" />
+							</td>
+                            <td style="height:24px; text-align:left; width:130px;">
+                                <asp:Button ID="Button2" runat="server" CssClass="Button_General"  Text="Nuevo Oficio" Width="125px" OnClick="btnBuscar_Click" />
 							</td>
                             <td style="height:24px;"></td>
                         </tr>
